@@ -11,5 +11,11 @@ public class File1
 	public static void main(String[] args){
 	 System.out.println("First Java");
 	 System.out.println("My Second Line of Code"); 		
+	 
+         //Instantiate the class by deep_branch 
+	 File1 f1 = new File1();
+         f1.add();
 	}
+
+
 }
