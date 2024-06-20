@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function changeText() {
+        const element = document.getElementById("mypara");
+        element.textContent = "Hello Everybody";
+      }
+
+      function showValue() {
+        const relement = document.getElementsByName("gender");
+        let val;
+        for (let i = 0; i < relement.length; i++) {
+          if (relement[i].checked) {
+            val = relement[i].value;
+            break;
+          }
+        }
+        document.getElementById("selval").textContent = "The value is :" + val;
+      }
+    </script>
+  </head>
+  <body>
+    <p id="mypara">Hello All</p>
+    <input type="submit" value="Change Text" onclick="changeText()" />
+    <form>
+      <input type="radio" name="gender" value="Male" />M <input type="radio" name="gender" value="Female" />F
+    </form>
+    <button onclick="showValue()">SHOW THE VALUE</button>
+    <div style="color: rgb(22, 255, 55)">
+      <p id="selval"></p>
+    </div>
+  </body>
+</html>
