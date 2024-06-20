@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //Syntax -1 ==> Declarative way
+      function evenorodd(num) {
+        if (num % 2 == 0) {
+          return "Even ";
+        } else {
+          return "Odd ";
+        }
+      }
+      document.write(evenorodd(50));
+
+      //Syntax -1 ==> Expression way
+      var evod = function (num) {
+        if (num % 2 == 0) {
+          return "Even ";
+        } else {
+          return "Odd ";
+        }
+      };
+      document.write(evod(5001));
+
+
+      
+    </script>
+  </head>
+  <body></body>
+</html>

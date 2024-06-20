@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var i;
+      for (i = 0; i < 5; i++) {
+        document.write("i = " + i + "<br/>");
+      }
+      var obj = {
+        eno: 444,
+        ename: "Asha",
+      };
+      for (let j in obj) {
+        document.write("obj = " + obj[j] + "<br/>");
+      }
+
+      var emplocations = ["Pune", "Mumbai", "Delhi"];
+      for (let k of emplocations) {
+        document.write("arr = " + k + "<br/>");
+      }
+
+      var name = "Akhil";
+      for (let k of name) {
+        document.write(k + "<br/>");
+      }
+
+      var k = 0;
+      while (k < 5) {
+        document.write(k + "<br/>");
+        k++;
+      }
+
+      var z = 10;
+      do {
+        document.write(z + "<br/>");
+        z--;
+      } while (z > 5);
+    </script>
+  </head>
+  <body></body>
+</html>
