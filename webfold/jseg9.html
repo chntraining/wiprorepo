@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //Template Literal
+      var str1 = `This is a Amit's book."This is great".'Good'`;
+      document.write(str1 + "<br/>");
+
+      var firstName = "Vaishali";
+      var lastName = "G";
+      document.write(`You are ${firstName} ${lastName}`);
+
+      //Spread Operator ... mainly used with Array
+      const arr1 = ["English", "Maths", "Science"];
+      const arr2 = [...arr1, "Computer Science", "Physics"];
+      document.write(arr1 + "<br/>");
+      document.write(arr2 + "<br/>");
+
+      //Default parameters
+      function product(x = 1, y = 1) {
+        return x * y;
+      }
+
+      function sum(x, y = 1, z = x + 2, a = product() + 2) {
+        return x + y + z + a;
+      }
+      document.write(sum(4));
+      //Rest parameters
+      let fun = function (...param) {
+        document.write(...(param + "<br/>"));
+      };
+      fun(1);
+      fun(1, 2);
+      fun(1, 2, 3);
+      fun(1, 2, 3, 4);
+    </script>
+  </head>
+  <body></body>
+</html>
