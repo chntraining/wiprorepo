@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function add(a, b) {
+        return a + b;
+      }
+      document.write(add(4, 4));
+      const z = (a, b) => {
+        return a + b;
+      };
+      document.write(z(4, 1));
+
+      class Emp {
+        #salary;
+        constructor(fname, lname, salary) {
+          this.fname = fname;
+          this.lname = lname;
+          this.#salary = salary;
+        }
+        showFullName() {
+          document.write(this.fname + " " + this.lname + "<br/>");
+        }
+        getSalary() {
+          document.write(this.#salary);
+        }
+        toString() {
+          return `Emp is  ${this.fname} ${this.lname} ${this.#salary}`;
+        }
+      }
+      class Manager extends Emp {
+        constructor(fname, lname, salary, designation) {
+          super(fname, lname, salary);
+          this.designation = designation;
+        }
+        toString() {
+          return `Manager is  ${this.fname} ${this.lname} ${this.salary} ${this.designation}`;
+        }
+      }
+
+      var e = new Emp("Guru", "Prasad", 40000);
+      document.write(e + "<br/>");
+      e.showFullName();
+      e.getSalary();
+
+      var m = new Manager("Divya", "S", 50000, "HR Manager");
+      document.write(m + "<br/>");
+      m.showFullName();
+    </script>
+  </head>
+  <body></body>
+</html>
