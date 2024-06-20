@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSon</title>
+    <script>
+      var emp = {
+        1: "EmpInfo",
+        empno: 1000,
+        ename: "Udhay",
+        age: 22,
+        isMarried: false,
+        "Salary info": 25000.0,
+        hobbies: null,
+        address: {
+          doorno: 45,
+          street: "MGRoad",
+          city: "bangalore",
+        },
+        phone: [89784556, 457889562],
+      };
+      //Dot Notation
+      document.write(emp.empno + "<br/>");
+      document.write(emp.ename + "<br/>");
+      document.write(emp.age + "<br/>");
+      document.write(emp.isMarried + "<br/>");
+      document.write(emp.hobbies + "<br/>");
+      document.write(emp.phone[1] + "<br/>");
+      document.write(emp.address.city + "<br/>");
+      //Square Notation
+      document.write(emp["Salary info"] + "<br/>");
+      document.write(emp[1] + "<br/>");
+    </script>
+  </head>
+  <body></body>
+</html>

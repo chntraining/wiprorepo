@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function showTime() {
+        var t = new Date();
+        document.getElementById("timeid").innerHTML = t.toLocaleTimeString();
+        // console.log(t);
+      }
+      setInterval(showTime, 1000); //Callback function
+
+      function changeBgColor() {
+        document.body.style.backgroundColor = "yellow";
+      }
+      document.addEventListener("click", changeBgColor);
+    </script>
+  </head>
+  <body>
+    <h1 style="color: blue"><span id="timeid"></span></h1>
+  </body>
+</html>
