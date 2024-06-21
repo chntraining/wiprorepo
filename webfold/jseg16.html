@@ -9,28 +9,35 @@
             myFunction(this);
           }
         };
-        xhttp.open("GET", "https://mpe7d97dbd601f04ad36.free.beeceptor.com/data", true);
+        xhttp.open("GET", "https://mp475b30bb08a63f3c2e.free.beeceptor.com/data", true);
         xhttp.send();
       }
       function myFunction(xml) {
         var i;
         var xmlDoc = xml.responseXML;
-        var table = "<tr><th>Title</th><th>Artist</th></tr>";
+        var table = "";
         var x = xmlDoc.getElementsByTagName("CD");
         for (i = 0; i < x.length; i++) {
-          table +=
-            "<tr><td>" +
-            x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
-            "</td><td>" +
-            x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
-            "</td></tr>";
+          var tit = x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue;
+          var art = x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue;
+          table += "<tr><td>" + tit + "</td><td>" + art + "<td></tr>";
         }
         document.getElementById("demo").innerHTML = table;
       }
     </script>
   </head>
   <body>
-    <div><p id="demo"></p></div>
+    <div>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>TITLE</th>
+            <th>ARTIST</th>
+          </tr>
+        </thead>
+        <tbody id="demo"></tbody>
+      </table>
+    </div>
     <button type="button" onclick="loadDoc()">Request data</button>
     <br />
   </body>
