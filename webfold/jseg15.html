@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div {
+        border: 1px solid black;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h3>H3 element</h3>
+      <p>I am a p element, my parent is a div element.</p>
+    </div>
+
+    <div>
+      <h3>H3 element</h3>
+      <p>I am a p element, my parent is also a div element.</p>
+    </div>
+
+    <p>
+      Click the button to change the background color of the first p element in the document where the parent
+      is a div element.
+    </p>
+
+    <button onclick="myFunctionQA()">Try it QSALL</button>
+    <button onclick="myFunction()">Try it QS</button>
+    <script>
+      function myFunctionQA() {
+        var nodeList = document.querySelectorAll("div > p");
+        for (let i = 0; i < nodeList.length; i++) {
+          nodeList[i].style.backgroundColor = "red";
+        }
+      }
+
+      function myFunction() {
+        var nodeList = document.querySelector("div > p");
+        nodeList.style.backgroundColor = "red";
+      }
+    </script>
+  </body>
+</html>
